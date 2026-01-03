@@ -31,6 +31,7 @@ fn run_day(day: Int, test_input: Bool) -> Nil {
         }
         2 -> {
           day2.day2a(ls) |> io.println
+          day2.day2b(ls) |> io.println
         }
         // Add more days here
         _ ->

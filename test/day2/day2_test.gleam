@@ -1,5 +1,16 @@
 import day2/day2
 
+pub fn should_day2b_test() {
+  let input = [
+    "11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124",
+  ]
+
+  let expected = "4174379265"
+  let result = day2.day2b(input)
+
+  assert result == expected
+}
+
 pub fn should_check_valid_product_id_test() {
   assert day2.is_invalid_product_id_a(1212) == True
   assert day2.is_invalid_product_id_a(1234) == False

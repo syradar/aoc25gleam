@@ -1,7 +1,21 @@
 import gleam/int
 import gleam/list
 import gleam/result
+import gleam/string
 
+/// Splits a string into two halves.
+/// If the string has an odd length, the extra character goes to the right half.
+pub fn split_string_in_half(s: String) -> #(String, String) {
+  let length = string.length(s)
+  let half_length = length / 2
+
+  let left = string.slice(s, 0, half_length)
+  let right = string.slice(s, half_length, length)
+
+  #(left, right)
+}
+
+/// Counts the number of digits in an integer.
 pub fn digit_count(n: Int) -> Result(Int, Nil) {
   let base = 10
   let value = int.absolute_value(n)

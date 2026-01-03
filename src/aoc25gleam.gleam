@@ -1,4 +1,5 @@
 import day1/day1
+import day2/day2
 import gleam/int
 import gleam/io
 import gleam/list
@@ -8,7 +9,7 @@ import simplifile
 
 pub fn main() -> Nil {
   io.println("Hello from aoc25gleam!")
-  run_day(1, False)
+  run_day(2, False)
 }
 
 const day_folder = "src/day"
@@ -27,6 +28,9 @@ fn run_day(day: Int, test_input: Bool) -> Nil {
         1 -> {
           day1.day1a(ls) |> io.println
           day1.day1b(ls) |> io.println
+        }
+        2 -> {
+          day2.day2a(ls) |> io.println
         }
         // Add more days here
         _ ->
